@@ -7,8 +7,13 @@
              x:DataType="viewModel:CrashTestPageModel"
              Title="CrashTestPage">
     <VerticalStackLayout>
-        <Button Text="Go Back"
-                Command="{Binding BackCommand}"></Button>
+        <HorizontalStackLayout Spacing="20">
+            <Button Text="Go Back No Crash"
+                    Command="{Binding NavigateBack}"></Button>
+            <Button Text="Go Back crashing"
+                    Command="{Binding BackCommand}"></Button>
+        </HorizontalStackLayout>
+       
         <telerik:RadComboBox x:Name="radComboBox" />
     </VerticalStackLayout>
 </ContentPage>
